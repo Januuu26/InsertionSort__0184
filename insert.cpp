@@ -30,4 +30,10 @@ void input(){
     }
 }
 
+void insertionsort() {
+    int temp;
+    int j;
 
+    for (int i = 0; i < n; i++) 
+    {
+ 
