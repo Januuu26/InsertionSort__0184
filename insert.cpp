@@ -12,4 +12,62 @@ void input(){
         if (n <= 20){
         break;
     }
-    
+        else {
+        cout << "\nArray tidak boleh lebih dari 20\n" ;
+        
+    }
+
+}
+
+    cout << endl;
+    cout << "======================================";
+    cout << "=========Masukan elemen array=========";
+    cout << "======================================" << endl;
+
+    for (int i = 0; i < n; i++) {
+        cout << "Data ke-" << (i + 1) << ":";
+        cin >> arr[i];
+    }
+}
+
+void insertionsort() {
+    int temp;
+    int j;
+
+    for (int i = 0; i < n; i++) 
+    {
+        temp = arr[i];
+        j = i - 1;
+        while (j >= 0 && arr[j] > temp) 
+        {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = temp;
+        cout << "\nStep " << i << ":";
+        for (int k = 0; k < n; k++) 
+        {
+            cout << arr[k] << " ";
+        }
+    }
+}
+
+void display()
+{
+    cout << "\n====================";
+    cout << "\nEelement Array" << endl;
+    cout << "====================" << endl;
+
+    for (int j = 0; j < n; j++) 
+    {
+        cout << arr[j] << endl;
+    }
+    cout << endl;
+}
+
+int main() {
+    input();
+    insertionsort();
+    display();
+    system("pause");
+}
